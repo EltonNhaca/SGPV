@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gerenciamento de Viaturas</title>
+    <style type="text/css">
+        .logo{
+            width: 10%;
+            position: absolute;
+            top: 4%;
+            left: 5%;
+        }
+
+        #header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), #009688) ,url(images/placegar-parque-estacionamento-4.jpg);
+            height: 150px;
+        }
+
+        .banner-header {
+            text-align: center;
+            color: #fff;
+            padding-top: 50px;
+        }
+
+        .banner-header h1 {
+            font-size: 130px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .banner-header p {
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .content {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .botao {
+            margin: 25px auto 0;
+            padding-left: 35%;
+            padding-bottom: 4%;
+        }
+
+        .content-text {
+            padding: 5% 20% 5% 27%;
+        }
+
+        .botao a {
+            width: 200px;
+            text-decoration: none;
+            margin: 10px 10px;
+            padding: 12px 10px;
+            color: black;
+            border: 1px solid #808080;
+            position: relative;
+        }
+
+        #main {
+            width: 400px;
+            margin: auto;
+        }
+
+        /*
+        .print {
+            display: none;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 30px;
+            width: 600px;
+        }
+
+        .print h1 {
+            border-bottom: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        @media print {
+            .print {
+                display: block;
+            }
+
+            .main {
+                display: none;
+            }
+        }
+        */
+
+    </style>
+</head>
+<body>
+    <section id="header">
+        <img src="images/onepark.png" class="logo">
+
+        <div class="banner-header">
+            <h2>S.G.P.V.</h2>
+            <p>Garantimos seguranca a sua viatura</p>
+        </div>
+    </section>
+    <br><br><br>
+
+    <section id="main">
+        <h1>Registro de Entrada de Viaturas</h1>
+
+        <fieldset>
+            <legend>Entrada</legend>
+            <table cellspacing="10">
+                <tr>
+                    <form action="gerarTalao.php" method="post">
+                        <label for="codigo">Codigo do Utente:  </label>
+                        <input type="number" name="codigo" id="codigo" required>
+                        <br><br>
+                        <input type="submit" value="Registrar Entrada">
+                    </form>
+                </tr>
+            </table>
+        </fieldset>
+        
+    </section>
+    <section id="botao para voltar">
+        <div class="botao">
+            <a href="entrada-saida.php"><span></span>Voltar!</a>
+        </div>
+    </section>
+
+    <!--
+    <div class="print">
+        <h1>----------Recibo----------</h1>
+        <br>
+        <p>Codigo de Utente: <span id="utente"></span></p>
+        <p>Data: <span id="data"></span></p>
+    </div>
+
+    <script>
+        function gerarRecibo() {
+            document.getElementById('codigo').innerHTML = document.getElementById('utente').value;
+            document.getElementById('data').innerHTML = dataAtual(); 
+        }
+
+        function dataAtual() {
+            let data = new Date();
+            return data.getDate() + "/" + (data.getMonth()+1) + "/" + data.getFullYear();
+        }
+    </script>
+    -->
+</body>
+</html>
